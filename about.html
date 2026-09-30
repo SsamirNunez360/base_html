@@ -1,46 +1,164 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <title>Portafolio | Ssamir Nuñez</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#sobre-mi">Sobre Mí</a></li>
-                    <li><a href="#habilidades">Habilidades</a></li>
-                    <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="#contacto">Contacto</a></li> 
-                </ul>
-            </nav>
-            <h1 id="inicio">Hola, soy Ssamir Nuñez</h1>
-            <p>Estudiante de Ingeniería en Sistemas Computacionales</p>
-        </header>
-        <main>
-            <section id="sobre-mi">
-                <h2>Sobre Mí</h2>
-                <p>Soy estudiante de Ingeniería en Sistemas Computacionales en la UNAH, apasionado por el desarrollo de software y la infraestructura tecnológica. Disfruto creando soluciones eficientes, desde aplicaciones web y backend hasta la administración de servidores y bases de datos.</p>
-            </section>
+<head>
+    <title>Servicios | Ssamir Nuñez</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li> 
+            </ul>
+        </nav>
+        <h1 id="inicio">Portal de Servicios - Ssamir Nuñez</h1>
+        <p>Ingeniería en Sistemas Computacionales | UNAH</p>
+        <hr>
+    </header>
 
-            <section id="habilidades">
-                <h2>Habilidades Técnicas</h2>
-                <ul>
-                    <li><strong>Desarrollo de Software:</strong> Python (Django/Flask), C# (.NET Core), Java (Spring Boot), Next.js, C/C++ y PHP.</li>
-                    <li><strong>Bases de Datos:</strong> MySQL, SQL Server, Oracle Database y MariaDB.</li>
-                    <li><strong>Infraestructura y Servidores:</strong> Administración de Linux (Debian, Ubuntu, AlmaLinux, CentOS), virtualización (Proxmox, Docker) y despliegue en la nube (AWS, Azure, GCP).</li>
-                </ul>
-            </section>
+    <main>
+        <p>Complete el siguiente formulario para cotizar un proyecto de desarrollo o infraestructura.</p>
+        
+        <form id="contacto">
+            <fieldset>
+                <legend>Datos del Cliente</legend>
+                <p>
+                    <label for="name">Nombre del Cliente:</label><br>
+                    <input type="text" id="name" name="nombre" placeholder="Ej. Juan Pérez">
+                </p>
+                <p>
+                    <label for="email">Correo Electrónico:</label><br>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com">
+                </p>
+                <p>
+                    <label for="phone">Teléfono / WhatsApp:</label><br>
+                    <input type="tel" id="phone" name="phone" placeholder="+504 0000-0000">
+                </p>
+                <p>
+                    <label for="password">Contraseña (Registro de Portal):</label><br>
+                    <input type="password" id="password" name="password">
+                </p>
+            </fieldset>
+            
+            <br>
+            
+            <fieldset>
+                <legend>Requerimientos del Proyecto</legend>
+                <p>
+                    <label for="servicio">Área requerida:</label><br>
+                    <select id="servicio" name="servicio">
+                        <option value="backend">Desarrollo Backend</option>
+                        <option value="frontend">Desarrollo Frontend</option>
+                        <option value="bd">Gestión de Bases de Datos</option>
+                        <optgroup label="Tecnologías Específicas">
+                            <option value="django">Python (Django)</option>
+                            <option value="netcore">C# (.NET Core)</option>
+                            <option value="linux">Servidores Linux (AlmaLinux / CentOS)</option>
+                        </optgroup>
+                    </select>
+                </p>
+                <p>
+                    <label>Tipo de Implementación:</label><br>
+                    <input type="radio" id="option1" name="options" value="nube">
+                    <label for="option1">Nube (AWS / Azure)</label><br>
+                    <input type="radio" id="option2" name="options" value="local">
+                    <label for="option2">Servidor Local</label>
+                </p>
+                <p>
+                    <label for="message">Descripción del Requerimiento:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="50" placeholder="Describa las necesidades..."></textarea>
+                </p>
+                <p>
+                    <label for="website">Dominio actual (Si aplica):</label><br>
+                    <input type="url" id="website" name="website" placeholder="ej. tutoriaconnectpro.lat">
+                </p>
+            </fieldset>
 
-            <section id="proyectos">
-                <h2>Proyectos Destacados</h2>
-                <p>He trabajado en diversas plataformas, incluyendo sistemas de gestión de inventarios, plataformas académicas y aplicaciones web, gestionando todo el ciclo desde el diseño de la base de datos hasta el despliegue en servidores web como Apache o Nginx.</p>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; 2026 Ssamir Nuñez. Todos los derechos reservados.</p>
-        </footer>
-    </body>
+            <br>
+
+            <fieldset>
+                <legend>Detalles Adicionales y Estimaciones</legend>
+                <p>
+                    <label for="number">Horas estimadas:</label><br>
+                    <input type="number" id="number" name="number" min="1" max="100">
+                </p>
+                <p>
+                    <label for="date">Fecha de inicio esperada:</label><br>
+                    <input type="date" id="date" name="date">
+                </p>
+                <p>
+                    <label for="file">Adjuntar documentación (PDF/DOCX):</label><br>
+                    <input type="file" id="file" name="file">
+                </p>
+                <p>
+                    <label for="range">Nivel de prioridad (0-100):</label><br>
+                    <input type="range" id="range" name="range" min="0" max="100">
+                </p>
+                <p>
+                    <label for="color">Color corporativo principal:</label>
+                    <input type="color" id="color" name="color">
+                </p>
+                <p>
+                    <input type="checkbox" id="subscribe" name="subscribe">
+                    <label for="subscribe">Suscribirse a actualizaciones de mantenimiento</label>
+                </p>
+            </fieldset>
+
+            <p>
+                <label for="search">Buscar un servicio específico en el portal:</label><br>
+                <input type="search" id="search" name="search">
+            </p>
+            
+            <p>
+                <button type="submit" value="Submit">Enviar Solicitud</button>
+            </p>
+        </form>
+    </main>
+
+    <hr>
+
+    <section id="proyectos">
+        <h2>Registro de Proyectos y Despliegues</h2>
+        <!-- Atributos HTML básicos para dar formato sin CSS -->
+        <table border="1" cellpadding="8" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Proyecto</th>
+                    <th>Tecnologías Principales</th>
+                    <th>Entorno / Servidor</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>TutorIA Connect Pro</td>
+                    <td>Apache, MariaDB, PHP</td>
+                    <td>AlmaLinux (Cloudflare Tunnels)</td>
+                    <td>En Producción</td>
+                </tr>
+                <tr>
+                    <td>UNAH-CONECTA</td>
+                    <td>WordPress, Moodle, MySQL</td>
+                    <td>AWS EC2</td>
+                    <td>Desplegado</td>
+                </tr>
+                <tr>
+                    <td>Dulce Reino</td>
+                    <td>Python (Django), HTML</td>
+                    <td>Desarrollo Local</td>
+                    <td>Completado</td>
+                </tr>
+            </tbody>
+        </table>  
+    </section>              
+    
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Ssamir Nuñez. Todos los derechos reservados.</p>
+    </footer>
+</body>
 </html>
