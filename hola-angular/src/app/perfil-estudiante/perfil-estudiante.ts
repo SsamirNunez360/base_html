@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
 
 @Component({
-  imports: [],
   selector: 'app-perfil-estudiante',
-  styleUrl: './perfil-estudiante.css',
+  imports: [],
   templateUrl: './perfil-estudiante.html',
+  styleUrl: '../saludo/saludo.css' 
 })
-export class PerfilEstudiante {}
+export class PerfilEstudiante {
+  nombre = 'Olber Ssamir Nuñez Izaguirre';
+  cuenta = '20232300089';
+  carrera = 'Ingeniería en Sistemas Computacionales';
+}

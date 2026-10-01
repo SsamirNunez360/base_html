@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  imports: [],
   selector: 'app-saludo',
-  styleUrl: './saludo.css',
+  imports: [],
   templateUrl: './saludo.html',
+  styleUrl: './saludo.css'
 })
-export class Saludo {}
+export class Saludo {
+  mensaje = 'Buen día mi estimado.';
+}
