@@ -1,0 +1,36 @@
+<main class="contenedor">
+  <header class="cabecera">
+    <p class="etiqueta"> ISC-305 - {{ asignatura() }}</p>
+    <h1>¡Hola, {{ nombre() }}! </h1>
+    <p class="descripcion">Versión optimizada y estilizada con Angular CLI.</p>
+  </header>
+  
+  <section class="tarjeta principal">
+    <h2>Interacción Dinámica</h2>
+    
+    <div class="marcador">
+      <span class="numero">{{ contador() }}</span>
+      <span class="texto">clics registrados</span>
+    </div>
+    
+    @if (contador() >= 5) {
+      <div class="alerta-exito">
+        <p>¡Excelente! Ya dominas la interacción básica en Angular.</p>
+      </div>
+    }
+    
+    <div class="acciones">
+      <button type="button" class="btn-primario" (click)="incrementar()">+1 Presionar</button>
+      <button type="button" class="btn-secundario" (click)="sumarCinco()">+5 Sumar</button>
+      <button type="button" class="btn-secundario" (click)="restarUno()">-1 Restar</button>
+      <button type="button" class="btn-peligro" (click)="reiniciar()" [disabled]="botonDeshabilitado()">
+        Reiniciar
+      </button>
+    </div>
+  </section>
+
+  <div class="componentes-extra">
+    <app-saludo />
+    <app-perfil-estudiante />
+  </div>
+</main>
