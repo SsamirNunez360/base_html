@@ -9,7 +9,7 @@ import { PerfilEstudiante } from './perfil-estudiante/perfil-estudiante';
   templateUrl: './app.html',
 })
 export class App {
-  // Señal base proporcionada en su código
+  // Señal base proporcionada
   protected readonly title = signal('hola-angular');
 
   // Señales requeridas por la guía y ejercicios

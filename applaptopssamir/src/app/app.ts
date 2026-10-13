@@ -13,7 +13,7 @@ export class App {
   readonly asignatura = signal('Programación Web');
   readonly contador = signal(0);
 
-  // Mejora: Señal computada para evaluar si el contador es cero
+  // Señal computada para evaluar si el contador es cero
   readonly botonDeshabilitado = computed(() => this.contador() === 0);
 
   incrementar(): void {
