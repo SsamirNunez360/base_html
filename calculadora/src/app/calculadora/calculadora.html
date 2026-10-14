@@ -1,1 +1,24 @@
-<p>calculadora works!</p>
+<main class="page">
+  <section class="calculator" aria-labelledby="calculator-title">
+    <h1 id="calculator-title">Calculadora</h1>
+
+    <label for="number-a">Primer número</label>
+    <input id="number-a" type="number" step="any" [(ngModel)]="a">
+
+    <label for="number-b">Segundo número</label>
+    <input id="number-b" type="number" step="any" [(ngModel)]="b">
+
+    <div class="operations" aria-label="Operaciones">
+      <button type="button" (click)="sumar()">Sumar</button>
+      <button type="button" (click)="restar()">Restar</button>
+      <button type="button" (click)="multiplicar()">Multiplicar</button>
+      <button type="button" (click)="dividir()">Dividir</button>
+    </div>
+
+    <p class="result" aria-live="polite">
+      Resultado: <output>{{ resultado }}</output>
+    </p>
+
+    <button class="clear-button" type="button" (click)="limpiar()">Limpiar</button>
+  </section>
+</main>
