@@ -8,7 +8,7 @@
 <table>
     <thead>
         <tr>
-            <th>ID</th><th>DNI</th><th>Nombre</th><th>Nacimiento</th>
+            <th>ID</th><th>DNI</th><th>Nombre</th><th>Nacimiento</th><th>Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -18,9 +18,12 @@
                 <td>{{ $persona->dni }}</td>
                 <td>{{ $persona->nombre }}</td>
                 <td>{{ $persona->fecha_nacimiento->format('d/m/Y') }}</td>
+                <td>
+                    <a href="{{ route('personas.edit', $persona->id) }}">Editar</a>
+                </td>
             </tr>
         @empty
-            <tr><td colspan="4">No hay personas registradas.</td></tr>
+            <tr><td colspan="5">No hay personas registradas.</td></tr>
         @endforelse
     </tbody>
 </table>
